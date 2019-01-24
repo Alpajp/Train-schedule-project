@@ -44,7 +44,7 @@
                                     <th scope="col">Minutes Away</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="train-table-rows">
                             </tbody>
                         </table>
                     </div>
@@ -63,21 +63,21 @@
                         <form>
                             <div class="form-group">
                                 <label for="train-name">Train Name</label>
-                                <input class="form-control" id="train-name" placeholder="Example: NJ Metro Railroad" type="text">
+                                <input class="form-control" id="train-name-input" placeholder="Example: NJ Metro Railroad" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="destination">Destination</label>
-                                <input class="form-control" id="destination" placeholder="Example: Broadways" type="text">
+                                <input class="form-control" id="destination-input" placeholder="Example: Broadways" type="text">
                             </div>
                             <div class="form-group">    
                                 <label for="frequency">Frequency(min)</label>
-                                <input class="form-control" id="frequency" placeholder="Example: 3" type="number">
+                                <input class="form-control" id="frequency-input" placeholder="Example: 3" type="number">
                             </div>
                             <div class="form-group">
-                                    <label for="first-time">First-Train(Time) (HH:mm - military time)</label>
-                                    <input class="form-control" id="first-time" placeholder="00:00" type="time">
+                                    <label for="first-time">First-Train Time: HH:mm - military time</label>
+                                    <input class="form-control" id="first-time-input" placeholder="00:00" type="text">
                                 </div>
-                            <button class="btn btn-primary float-right" id="add-Train-btn">Submit</button>
+                            <button class="btn btn-primary float-right" id="add-train-btn">Submit</button>
                         </form>
 
                     </div>
