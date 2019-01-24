@@ -1,13 +1,13 @@
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDt1AO88NlXFZxF5jtm8crvWp2iHTXmqFk",
-    authDomain: "my-firebase-project-ebd46.firebaseapp.com",
-    databaseURL: "https://my-firebase-project-ebd46.firebaseio.com",
-    projectId: "my-firebase-project-ebd46",
-    storageBucket: "my-firebase-project-ebd46.appspot.com",
-    messagingSenderId: "877624670936"
-  };
-  firebase.initializeApp(config);
+ // Initialize Firebase
+ var config = {
+  apiKey: "AIzaSyDt1AO88NlXFZxF5jtm8crvWp2iHTXmqFk",
+  authDomain: "my-firebase-project-ebd46.firebaseapp.com",
+  databaseURL: "https://my-firebase-project-ebd46.firebaseio.com",
+  projectId: "my-firebase-project-ebd46",
+  storageBucket: "my-firebase-project-ebd46.appspot.com",
+  messagingSenderId: "877624670936"
+};
+firebase.initializeApp(config);
 
 var database = firebase.database();
 
@@ -53,14 +53,11 @@ $("#add-Train-btn").on("click", function(event) {
 // 3. Create Firebase event for adding train to the database and a row in the html when a user adds an entry
 database.ref().on("child_added", function(childSnapshot){ 
   console.log(childSnapshot.val());
+  var trainName = childSnapshot.val().name;
+  var trainDest = childSnapshot.val().destination;
+  var trainFrequency = childSnapshot.val().frequency;
+  var trainTime = childSnapshot.val().time;
 
-  // First Time (pushed back 1 year to make it sure before current time)
-  // var trainTimeConverted = moment(trainTime, "HH:mm").subtract(1, "years");
-  // console.log(trainTimeConverted);
-
-  // Current Time
-  // var currentTime = moment();
-  // console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
   var diffTime = moment().diff(moment())
 
@@ -82,12 +79,14 @@ console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
   // Create the new row
   var newRow = $("<tr>").append(
     $("<td>").text(trainName),
-    $("<td>").text(destination),
+    $("<td>").text(trainDest),
     $("<td>").text(trainFrequency),
     $("<td>").text(nextTrain),
     $("<td>").text(tMinutesTillTrain),
    
   );
+
+  console.log("New Row", newRow);
 //Append the new roe to the table
 $("#train-table").append(newRow);
 
