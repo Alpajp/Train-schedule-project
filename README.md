@@ -1,5 +1,5 @@
 # Train-schedule-project
-This project allows a user to creat a trainline and also a schedule. It will also allows a user to see the lines that are already established and their arrival time and schedule.
+This project allows a user to create a train line and also a schedule. It will also allows a user to see the lines that are already established and their arrival time and schedule.
 
 This project will be useful if you want to track the schedule of a train in real time and find out where a train line of the user's choice would fall in comparison.
 
