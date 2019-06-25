@@ -1,7 +1,7 @@
-# Train-schedule-project
-This project allows a user to create a train line and also a schedule. It will also allows a user to see the lines that are already established and their arrival time and schedule.
+# Train-scheduler
 
-This project will be useful if you want to track the schedule of a train in real time and find out where a train line of the user's choice would fall in comparison.
+
+This is a train scheduling application intended to be used by a scheduling administrator to keep track of departures. Moment.js and Firebase are the featured technologies in this app.
 
 You can access this project through this link: https://alpajp.github.io/Train-schedule-project/
 
